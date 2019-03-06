@@ -30,7 +30,7 @@ anEstYra
 10. exec(open('script.py').read())
 11. docker-compose stop web
     docker-compose up --build -d web
-
+12. docker-compose logs -f web 
 
 #
 export EMAIL_PASSWORD = '48Hvv602019'
