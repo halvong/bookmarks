@@ -23,15 +23,15 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes />
+    <loaded-nodes>
+      <connection connection-id="262ff63a-ac5d-4a24-b1ae-f336e432e2c2">
+        <schema name="public" object-types="table, view, sequence, function" />
+      </connection>
+    </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="262ff63a-ac5d-4a24-b1ae-f336e432e2c2">
-      <console name="bookmarks - Django Docker" type="STANDARD" schema="public" session="Main"><![CDATA[from django import forms
-
-class LoginForm(forms.Form):
-    username = forms.CharField()
-    password = forms.CharField(widget=forms.PasswordInput)]]></console>
+      <console name="bookmarks - Django Docker" type="STANDARD" schema="public" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">

@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import Profile
 
-# Register your models here.
+#todo-hal - needs to understand how the admin works.
+@admin.register(Profile)
+class ProfileAdmin(admin.ModelAdmin):
+    list_display = ['user', 'date_of_birth', 'photo']
