@@ -1,6 +1,6 @@
 Django2, Apress PDF
 3/5, Tues
-pg106
+pg111
 
 #notes
 authentication views, pg 106
@@ -14,8 +14,7 @@ hal:hal
 http://localhost:8000/admin
 
 #user
-admin
-anEstYra
+hal:hal
 
 #steps
 1. python manage.py migrate
@@ -33,7 +32,6 @@ anEstYra
 12. docker-compose logs -f web 
 
 #
-export EMAIL_PASSWORD = '48Hvv602019'
 
 #----
 user = User.objects.get(username='peter')
