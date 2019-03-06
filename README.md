@@ -24,7 +24,7 @@ hal:hal
 5. docker-compose exec web python manage.py sqlmigrate blogi 0001
 6. docker-compose exec web python manage.py migrate
 7. docker-compose exec web python manage.py createsuperuser 
-8. docker-compose exec web python manage.py shell 
+8. docker-compose exec web python manage.py shell~~~~ 
 9. docker-compose exec database psql -U postgres -h database
 10. exec(open('script.py').read())
 11. docker-compose stop web
