@@ -23,11 +23,7 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes>
-      <connection connection-id="262ff63a-ac5d-4a24-b1ae-f336e432e2c2">
-        <schema name="public" object-types="table, view, sequence, function" />
-      </connection>
-    </loaded-nodes>
+    <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="262ff63a-ac5d-4a24-b1ae-f336e432e2c2">
@@ -73,7 +69,7 @@ class LoginForm(forms.Form):
           <description value="" />
           <database-type value="POSTGRES" />
           <config-type value="BASIC" />
-          <database-version value="9999.0" />
+          <database-version value="10.4" />
           <driver-source value="BUILTIN" />
           <driver-library value="" />
           <driver value="" />
