@@ -1,6 +1,7 @@
 Django2, Apress PDF
-3/5, Tues
-pg111
+3/11, Mon
+pg113
+chp4
 
 #notes
 authentication views, pg 106
