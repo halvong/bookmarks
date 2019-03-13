@@ -1,6 +1,6 @@
 Django2, Apress PDF
-3/12, Tues
-pg116
+3/13, Wed
+pg120
 chp4
 
 #notes
@@ -35,6 +35,7 @@ peter:networkof
 12. docker-compose logs -f web 
 13. docker-compose up -d --force-recreate web #recreate container web 
 14. docker-compose exec web python manage.py shell --settings=bookmarks.settings.dev
+
 #----
 user = User.objects.get(username='peter')
 post = Post(title='Java Lambdas and Parallel Streams', slug='java_lambdas_and_parallel_streams', status='published', body='Java Lambdas and Parallel Streams', author=user)
