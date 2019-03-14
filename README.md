@@ -1,6 +1,6 @@
 Django2, Apress PDF
-3/13, Wed
-pg120
+3/14, Thurs
+pg133
 chp4
 
 #notes
@@ -10,13 +10,22 @@ authentication views, pg 106
 bookmarks
 
 #superuser
-hal:hal
+david:david
 
 http://localhost:8000/admin
 
 #user
-hal:hal
-peter:networkof
+david:david
+hvong@legalzoom.com
+---
+hal:worknoww 
+halvong@yahoo.com
+---
+peter:ofnetwork 
+halvong5@gmail.com
+---
+tim:tim
+halvong@outlook.com
 
 #steps
 1. python manage.py migrate
