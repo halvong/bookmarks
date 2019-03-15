@@ -1,7 +1,7 @@
 Django2, Apress PDF
 3/15, Fri
-pg133
-chp4
+pg154
+chp5
 
 #notes
 authentication views, pg 106
@@ -45,6 +45,7 @@ halvong@outlook.com
 13. docker-compose up -d --force-recreate web #recreate container web 
 14. docker-compose exec web python manage.py shell --settings=bookmarks.settings.dev
     docker-compose exec web python manage.py migrate --settings=bookmarks.settings.dev
+15. docker-compose exec web python manage.py makemigrations images --settings=bookmarks.settings.dev
 
 #----
 user = User.objects.get(username='peter')
