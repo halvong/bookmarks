@@ -3,6 +3,8 @@ Django2, Apress PDF
 pg154
 chp5
 
+Testing rebase
+
 #notes
 authentication views, pg 106
 
