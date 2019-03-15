@@ -1,6 +1,6 @@
 Django2, Apress PDF
-3/12, Tues
-pg116
+3/15, Fri
+pg133
 chp4
 
 #notes
@@ -10,13 +10,22 @@ authentication views, pg 106
 bookmarks
 
 #superuser
-hal:hal
+david:david
 
 http://localhost:8000/admin
 
 #user
-hal:hal
-peter:networkof
+david:david
+hvong@legalzoom.com
+---
+hal:worknoww 
+halvong@yahoo.com
+---
+peter:ofnetwork 
+halvong5@gmail.com
+---
+tim:tim
+halvong@outlook.com
 
 #steps
 1. python manage.py migrate
@@ -35,6 +44,8 @@ peter:networkof
 12. docker-compose logs -f web 
 13. docker-compose up -d --force-recreate web #recreate container web 
 14. docker-compose exec web python manage.py shell --settings=bookmarks.settings.dev
+    docker-compose exec web python manage.py migrate --settings=bookmarks.settings.dev
+
 #----
 user = User.objects.get(username='peter')
 post = Post(title='Java Lambdas and Parallel Streams', slug='java_lambdas_and_parallel_streams', status='published', body='Java Lambdas and Parallel Streams', author=user)
