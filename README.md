@@ -1,5 +1,5 @@
 Django2, Apress PDF
-3/14, Thurs
+3/15, Fri
 pg133
 chp4
 
@@ -44,6 +44,7 @@ halvong@outlook.com
 12. docker-compose logs -f web 
 13. docker-compose up -d --force-recreate web #recreate container web 
 14. docker-compose exec web python manage.py shell --settings=bookmarks.settings.dev
+    docker-compose exec web python manage.py migrate --settings=bookmarks.settings.dev
 
 #----
 user = User.objects.get(username='peter')
