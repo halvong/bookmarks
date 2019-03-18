@@ -1,7 +1,9 @@
 Django2, Apress PDF
-3/15, Fri
-pg133
-chp4
+3/18, Sat
+pg164
+chp5
+
+bookmarklet
 
 #notes
 authentication views, pg 106
@@ -45,6 +47,7 @@ halvong@outlook.com
 13. docker-compose up -d --force-recreate web #recreate container web 
 14. docker-compose exec web python manage.py shell --settings=bookmarks.settings.dev
     docker-compose exec web python manage.py migrate --settings=bookmarks.settings.dev
+15. docker-compose exec web python manage.py makemigrations images --settings=bookmarks.settings.dev
 
 #----
 user = User.objects.get(username='peter')
@@ -52,3 +55,9 @@ post = Post(title='Java Lambdas and Parallel Streams', slug='java_lambdas_and_pa
 post.save()
 #----
 send_mail('Django Bookmarks mail', 'This e-mail was sent with Django.', 'halvong@outlook.com', ['halvong@yahoo.com'], fail_silently=False)
+
+#----
+http://127.0.0.1:8000/images/create/?title=%20Django%20and%20Duke&url=http://upload.wikimedia.org/wikipedia/commons/8/85/Django_Reinhardt_and_Duke_Ellington_%28Gottlieb%29.jpg
+
+
+
