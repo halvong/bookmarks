@@ -1,7 +1,7 @@
 Django2, Apress PDF
-3/21, Wed
-pg178
-chp5
+3/22, Fri
+pg193
+chp6
 
 bookmarklet works!
 
