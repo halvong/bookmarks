@@ -1,9 +1,9 @@
 Django2, Apress PDF
-3/18, Sat
-pg164
-chp5
+3/22, Fri
+pg193
+chp6
 
-bookmarklet
+bookmarklet works!
 
 #notes
 authentication views, pg 106
