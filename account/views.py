@@ -1,41 +1,54 @@
-from django.shortcuts import render
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .forms import LoginForm, UserRegistrationForm, UserEditForm, ProfileEditForm
+from django.shortcuts import get_object_or_404
+from django.contrib.auth.models import User
 from .models import Profile
 
 @login_required
-def dashboard(request):
-    print ("IN dashboard TESTL10 (account.views.py). New form.")
-    return render(request, 'account/dashboard.html', {'section': 'dashboard'})
+def user_list(request):
+    users = User.objects.filter(is_active=True)
+    return render(request, 'account/user/list.html', {'section': 'people', 'users': users})
+
+@login_required
+def user_detail(request, username):
+    user = get_object_or_404(User, username=username, is_active=True)
+    return render(request, 'account/user/detail.html', {'section': 'people', 'user': user})
 
 def user_login(request):
-
-    print ("IN user_login TESTL14 (account.views.py)")
 
     if request.method == 'POST':
 
         form = LoginForm(request.POST)
 
         if form.is_valid():
+
             cd = form.cleaned_data
             user = authenticate(request, username=cd['username'], password=cd['password'])
 
             if user is not None:
+
                 if user.is_active:
                     login(request, user)
                     return HttpResponse('Authenticated successfully')
                 else:
                     return HttpResponse('Disabled account')
+
             else:
                 return HttpResponse('Invalid login')
     else:
-        print ("IN user_login TESTL33 (account.views.py). New form.")
         form = LoginForm()
-        return render(request, 'account/login.html', {'form': form})
+
+    return render(request, 'account/login.html', {'form': form})
+
+
+@login_required
+def dashboard(request):
+    return render(request, 'account/dashboard.html', {'section': 'dashboard'})
+
 
 def register(request):
 
@@ -59,6 +72,7 @@ def register(request):
 
     return render(request, 'account/register.html', {'user_form': user_form})
 
+
 @login_required
 def edit(request):
 
@@ -68,9 +82,11 @@ def edit(request):
         profile_form = ProfileEditForm(instance=request.user.profile, data=request.POST, files=request.FILES)
 
         if user_form.is_valid() and profile_form.is_valid():
+
             user_form.save()
             profile_form.save()
             messages.success(request, 'Profile updated successfully')
+
         else:
             messages.error(request, 'Error updating your profile')
     else:
@@ -78,4 +94,3 @@ def edit(request):
         profile_form = ProfileEditForm(instance=request.user.profile)
 
     return render(request, 'account/edit.html', {'user_form': user_form, 'profile_form': profile_form})
-
